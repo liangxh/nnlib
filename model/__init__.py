@@ -1,5 +1,3 @@
-import importlib
-
 _prefix = 'nnlib.model.'
 
 def get(module_name, class_name = None):

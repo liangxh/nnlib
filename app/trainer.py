@@ -21,7 +21,7 @@ class Trainer:
 		err = 0
 
 		for x, y in data_iterator.iterate(batch_size):
-			proba = self.model.predict(self.input_adapt(x))
+			proba = self.model.predict(*self.input_adapt(x))
 			err += (np.argmax(proba, axis = 1) == np.asarray(y)).sum()
 			
 		err = 1. - float(err) / data_iterator.num
@@ -45,8 +45,8 @@ class Trainer:
 		dim_hidden = None,
 
 		valid_batch_size = 64,
-		validFreq = 100,
-		saveFreq = 100,
+		validFreq = 1000,
+		saveFreq = 1000,
 		patience = 10,
 		max_epochs = 5000,
 
