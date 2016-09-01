@@ -25,7 +25,7 @@ def build(tparams, prefix, states_before, odim, bias = False, bias_init = 0.):
 	dim = np.sum(map(lambda k:k.odim, states_before))
 	
 	name = '%s_W'%(prefix)
-	value_init = initializer.weight_xavier(dim, odim, floatX)
+	value_init = initializer.weight_xavier(dim, odim)
 	tparams[name] = theano.shared(value_init, name = name)
 
 	value = T.dot(value_concat, tparams[name])

@@ -27,7 +27,7 @@ def weight_orthogonal(n_row, n_col, dtype = floatX):
 def weight_xavier(n_rol, n_col, dtype = floatX):
 	span = math.sqrt(6./(n_rol + n_col))
 
-	return np.random.uniform(-span, span, [n_rol, n_col])
+	return np.random.uniform(-span, span, [n_rol, n_col]).astype(dtype)
 
 def bias(dim, init = .1, dtype = floatX):
 	if init == 0.:
