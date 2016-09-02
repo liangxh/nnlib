@@ -220,7 +220,7 @@ class Trainer:
 			fname_param,
 			train_err = train_err,
 			valid_err = valid_err,
-			test_error = test_err,
+			test_err = test_err,
 			history_errs = history_errs,
 			**best_p
 			)
