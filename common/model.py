@@ -11,7 +11,7 @@ from collections import OrderedDict
 
 from flag import Flag
 
-class Model:
+class ModelFrame:
 	def __init__(self):
 		self.tparams = OrderedDict()
 		self.flag_training = Flag(False)

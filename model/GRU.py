@@ -8,9 +8,9 @@ import theano.tensor as T
 floatX = theano.config.floatX
 #theano.config.exception_verbosity = 'high'
 
-from nnlib.common import State, Flag, Model
+from nnlib.common import State, Flag, ModelFrame
 
-class GRU(Model):
+class Model(ModelFrame):
 	def build(self, options):
 		x = T.matrix('x', dtype = 'int64')
 		
