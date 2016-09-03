@@ -10,7 +10,7 @@ floatX = theano.config.floatX
 
 from nnlib.common import State, Flag, Model
 
-class BLSTM(Model):
+class BLSTM2L(Model):
 	def build(self, options):
 		x = T.matrix('x', dtype = 'int64')
 		
