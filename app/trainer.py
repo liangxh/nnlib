@@ -5,6 +5,7 @@ Author: Xihao Liang
 Created: 2016.08.30
 '''
 
+import os
 import sys
 import time
 import cPickle
